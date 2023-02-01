@@ -1,4 +1,6 @@
+import 'package:fifth_exam/bloc/conecctivity/connectivity_cubit.dart';
 import 'package:fifth_exam/bloc/user_cubit/user_cubit_cubit.dart';
+import 'package:fifth_exam/screens/router.dart';
 import 'package:fifth_exam/screens/tab_box/tab_box.dart';
 import 'package:fifth_exam/service/locator_service.dart';
 import 'package:flutter/material.dart';
@@ -12,6 +14,7 @@ void main() {
         BlocProvider(
           create: (context) => UserCubit(),
         ),
+        BlocProvider(create: (context) => ConnectivityCubit()),
       ],
       child: MyApp(),
     ),
@@ -24,12 +27,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      initialRoute: RoutName.tabBox,
+      onGenerateRoute: AppRoutes.generateRoute,
       debugShowCheckedModeBanner: false,
       title: 'Fifth Exam',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: TabBoxPage(),
     );
   }
 }

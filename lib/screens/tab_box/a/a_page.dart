@@ -13,7 +13,7 @@ class APage extends StatelessWidget {
         return Scaffold(
           appBar: AppBar(
             title: const Text(
-              'Users User',
+              'A Page',
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.w600,

@@ -1,3 +1,7 @@
+import 'package:connectivity_plus/connectivity_plus.dart';
+import 'package:fifth_exam/bloc/conecctivity/connectivity_cubit.dart';
+import 'package:fifth_exam/bloc/conecctivity/connectivity_state.dart';
+import 'package:fifth_exam/screens/router.dart';
 import 'package:fifth_exam/screens/tab_box/a/a_page.dart';
 import 'package:fifth_exam/screens/tab_box/b/b_page.dart';
 import 'package:fifth_exam/screens/tab_box/c/c_page.dart';
@@ -14,6 +18,7 @@ class TabBoxPage extends StatefulWidget {
 }
 
 class _TabBoxPageState extends State<TabBoxPage> {
+  final GlobalKey<ScaffoldState> _key = GlobalKey();
   List<Widget> screens = [];
   @override
   void initState() {
@@ -24,6 +29,10 @@ class _TabBoxPageState extends State<TabBoxPage> {
     super.initState();
   }
 
+  _init() async {
+    print("INTERNET TURNED ON CALL ANY API");
+  }
+
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
@@ -31,45 +40,57 @@ class _TabBoxPageState extends State<TabBoxPage> {
       child: BlocBuilder<BottomNavCubit, int>(
         builder: (context, state) {
           var index = context.watch<BottomNavCubit>().activePageIndex;
-          return Scaffold(
-            body: screens[index],
-            bottomNavigationBar: BottomNavigationBar(
-              type: BottomNavigationBarType.fixed,
-              currentIndex: index,
-              unselectedItemColor: Colors.black,
-              selectedItemColor: Colors.blue,
-              onTap: (value) => BlocProvider.of<BottomNavCubit>(context)
-                  .changePageIndex(value),
-              items: const [
-                BottomNavigationBarItem(
-                  icon: Icon(
-                    Icons.person,
-                    size: 30,
+          return BlocListener<ConnectivityCubit, ConnectivityState>(
+            listener: (context, state) {
+              if (state.connectivityResult == ConnectivityResult.none) {
+                Navigator.pushNamed(
+                  context,
+                  RoutName.noInternetRoute,
+                  arguments: _init,
+                );
+              }
+            },
+            child: Scaffold(
+              key: _key,
+              body: screens[index],
+              bottomNavigationBar: BottomNavigationBar(
+                type: BottomNavigationBarType.fixed,
+                currentIndex: index,
+                unselectedItemColor: Colors.black,
+                selectedItemColor: Colors.blue,
+                onTap: (value) => BlocProvider.of<BottomNavCubit>(context)
+                    .changePageIndex(value),
+                items: const [
+                  BottomNavigationBarItem(
+                    icon: Icon(
+                      Icons.person,
+                      size: 30,
+                    ),
+                    label: "A",
                   ),
-                  label: "A",
-                ),
-                BottomNavigationBarItem(
-                  icon: Icon(
-                    Icons.person,
-                    size: 30,
+                  BottomNavigationBarItem(
+                    icon: Icon(
+                      Icons.person,
+                      size: 30,
+                    ),
+                    label: "B",
                   ),
-                  label: "B",
-                ),
-                BottomNavigationBarItem(
-                  icon: Icon(
-                    Icons.password,
-                    size: 30,
+                  BottomNavigationBarItem(
+                    icon: Icon(
+                      Icons.password,
+                      size: 30,
+                    ),
+                    label: "C",
                   ),
-                  label: "C",
-                ),
-                BottomNavigationBarItem(
-                  icon: Icon(
-                    Icons.notifications,
-                    size: 30,
+                  BottomNavigationBarItem(
+                    icon: Icon(
+                      Icons.notifications,
+                      size: 30,
+                    ),
+                    label: "D",
                   ),
-                  label: "D",
-                ),
-              ],
+                ],
+              ),
             ),
           );
         },

@@ -38,6 +38,8 @@ dependencies:
   flutter_bloc: ^8.1.1
   dio: ^4.0.6
   get_it: ^7.2.0
+  connectivity_plus: ^2.3.7
+  equatable: ^2.0.5
 
 dev_dependencies:
   flutter_test:

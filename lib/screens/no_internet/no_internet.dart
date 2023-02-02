@@ -1,6 +1,6 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
-import 'package:fifth_exam/bloc/conecctivity/connectivity_cubit.dart';
-import 'package:fifth_exam/bloc/conecctivity/connectivity_state.dart';
+import 'package:fifth_exam/cubit/conecctivity_cubit/connectivity_cubit.dart';
+import 'package:fifth_exam/cubit/conecctivity_cubit/connectivity_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

@@ -1,6 +1,9 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
-import 'package:fifth_exam/bloc/conecctivity/connectivity_cubit.dart';
-import 'package:fifth_exam/bloc/conecctivity/connectivity_state.dart';
+import 'package:fifth_exam/bloc/bloc_notification_add/notification_add_bloc.dart';
+import 'package:fifth_exam/bloc/bloc_notification_add/notification_add_state.dart';
+import 'package:fifth_exam/cubit/conecctivity_cubit/connectivity_cubit.dart';
+import 'package:fifth_exam/cubit/conecctivity_cubit/connectivity_state.dart';
+import 'package:fifth_exam/cubit/notification_get_cubit/notification_cubit.dart';
 import 'package:fifth_exam/screens/router.dart';
 import 'package:fifth_exam/screens/tab_box/a/a_page.dart';
 import 'package:fifth_exam/screens/tab_box/b/b_page.dart';

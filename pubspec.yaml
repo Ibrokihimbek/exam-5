@@ -40,6 +40,15 @@ dependencies:
   get_it: ^7.2.0
   connectivity_plus: ^2.3.7
   equatable: ^2.0.5
+  firebase_core: ^2.3.0
+  firebase_auth: ^4.1.5
+  firebase_storage: ^11.0.6
+  cloud_firestore: ^4.1.0
+  firebase_analytics: ^10.0.6
+  firebase_in_app_messaging: ^0.7.0+7
+  firebase_messaging: ^14.1.4
+  sqflite: ^2.2.4+1
+  http: ^0.13.5
 
 dev_dependencies:
   flutter_test:

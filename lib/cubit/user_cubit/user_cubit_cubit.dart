@@ -1,4 +1,4 @@
-import 'package:fifth_exam/bloc/user_cubit/user_cubit_state.dart';
+import 'package:fifth_exam/cubit/user_cubit/user_cubit_state.dart';
 import 'package:fifth_exam/data/models/my_responce/response_model.dart';
 import 'package:fifth_exam/data/repository/user_repository.dart';
 import 'package:fifth_exam/service/locator_service.dart';

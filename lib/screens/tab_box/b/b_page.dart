@@ -1,5 +1,5 @@
-import 'package:fifth_exam/bloc/user_cubit/user_cubit_cubit.dart';
-import 'package:fifth_exam/bloc/user_cubit/user_cubit_state.dart';
+import 'package:fifth_exam/cubit/user_cubit/user_cubit_cubit.dart';
+import 'package:fifth_exam/cubit/user_cubit/user_cubit_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

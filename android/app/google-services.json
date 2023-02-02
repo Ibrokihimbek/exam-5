@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "432325362441",
+    "project_id": "fifth-exam-eed96",
+    "storage_bucket": "fifth-exam-eed96.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:432325362441:android:9091dd97741933490b09d8",
+        "android_client_info": {
+          "package_name": "com.example.fifth_exam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "432325362441-sgl9tajvdic9gma7k4qkpe88a8aok2t7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKFMFNO9LWdmovIubafAJwt9j_1luXAdM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "432325362441-sgl9tajvdic9gma7k4qkpe88a8aok2t7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

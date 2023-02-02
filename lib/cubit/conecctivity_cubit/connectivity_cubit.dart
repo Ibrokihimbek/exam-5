@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
-import 'package:fifth_exam/bloc/conecctivity/connectivity_state.dart';
+import 'package:fifth_exam/cubit/conecctivity_cubit/connectivity_state.dart';
 import 'package:flutter/services.dart';
 import 'package:meta/meta.dart';
 

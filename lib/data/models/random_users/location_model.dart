@@ -7,7 +7,7 @@ class Location {
   String city;
   String state;
   String country;
-  int postcode;
+  dynamic postcode;
   Coordinates coordinates;
   Timezone timezone;
 
@@ -26,7 +26,7 @@ class Location {
         city: json["city"] as String? ?? '',
         state: json["state"] as String? ?? '',
         country: json["country"] as String? ?? '',
-        postcode: json["postcode"] as int? ?? 0,
+        postcode: json["postcode"] as dynamic? ?? 0,
         coordinates: Coordinates.fromJson(json["coordinates"]),
         timezone: Timezone.fromJson(json["timezone"]),
       );

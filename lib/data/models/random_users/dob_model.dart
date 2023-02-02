@@ -1,6 +1,6 @@
 class Dob {
   DateTime date;
-  int age;
+  dynamic age;
 
   Dob({
     required this.date,
@@ -9,6 +9,6 @@ class Dob {
 
   factory Dob.fromJson(Map<String, dynamic> json) => Dob(
         date: DateTime.parse(json["date"]),
-        age: json["age"]as int? ?? 0,
+        age: json["age"]as dynamic? ?? 0,
       );
 }

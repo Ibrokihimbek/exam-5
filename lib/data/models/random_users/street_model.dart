@@ -1,5 +1,5 @@
 class Street {
-  int number;
+  dynamic number;
   String name;
   Street({
     required this.number,
@@ -7,7 +7,7 @@ class Street {
   });
 
   factory Street.fromJson(Map<String, dynamic> json) => Street(
-        number: json["number"]as int? ?? 0,
+        number: json["number"]as dynamic? ?? 0,
         name: json["name"]as String? ?? '',
       );
 }

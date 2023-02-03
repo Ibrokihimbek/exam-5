@@ -1,14 +1,12 @@
+import 'package:fifth_exam/data/models/notification_model/notification_model.dart';
 import 'package:flutter/material.dart';
 
 class NotificationItem extends StatelessWidget {
-  final String imagePath;
-  final String title;
-  final String description;
+  final NotificationModel notificationModel;
+
   const NotificationItem({
     super.key,
-    required this.imagePath,
-    required this.title,
-    required this.description,
+    required this.notificationModel,
   });
 
   @override
@@ -32,7 +30,7 @@ class NotificationItem extends StatelessWidget {
         child: Row(
           children: [
             Image.network(
-              imagePath,
+              notificationModel.image,
               width: 70,
             ),
             const SizedBox(width: 12),
@@ -40,13 +38,9 @@ class NotificationItem extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  title,
-                ),
+                Text(notificationModel.title),
                 const SizedBox(height: 8),
-                Text(
-                  description,
-                ),
+                Text(notificationModel.description),
               ],
             )
           ],

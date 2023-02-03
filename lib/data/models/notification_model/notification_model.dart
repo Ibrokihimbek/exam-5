@@ -3,18 +3,18 @@ const String tableName = "notification_fifth_exam";
 class NotificationFields {
   static final List<String> values = [
     /// Add all fields
-    id, title, body, date, image
+    id, title, description, date, image
   ];
   static const String id = "_id";
   static const String title = "title";
-  static const String body = "body";
+  static const String description = "body";
   static const String date = "date";
   static const String image = "image";
 }
 
 class NotificationModel {
   final int? id;
-  final String body;
+  final String description;
   final String title;
   final String date;
   final String image;
@@ -23,19 +23,19 @@ class NotificationModel {
       {this.id,
       required this.title,
       required this.date,
-      required this.body,
+      required this.description,
       required this.image});
 
   NotificationModel copyWith(
           {int? id,
           String? title,
-          String? body,
+          String? description,
           String? date,
           String? image}) =>
       NotificationModel(
         id: id ?? this.id,
         title: title ?? this.title,
-        body: body ?? this.body,
+        description: description ?? this.description,
         date: date ?? this.date,
         image: image ?? this.image,
       );
@@ -44,7 +44,7 @@ class NotificationModel {
       NotificationModel(
         id: json[NotificationFields.id] as int?,
         title: json[NotificationFields.title] as String,
-        body: json[NotificationFields.body] as String,
+        description: json[NotificationFields.description] as String,
         date: json[NotificationFields.date] as String,
         image: json[NotificationFields.image] as String,
       );
@@ -53,7 +53,7 @@ class NotificationModel {
         NotificationFields.id: id,
         NotificationFields.title: title,
         NotificationFields.date: date,
-        NotificationFields.body: body,
+        NotificationFields.description: description,
         NotificationFields.image: image,
       };
 
@@ -61,7 +61,7 @@ class NotificationModel {
   String toString() => '''
         ID: $id 
         USER NAME $title
-        SUMM $body
+        SUMM $description
         DATE $date
         ImAGE $image
       ''';

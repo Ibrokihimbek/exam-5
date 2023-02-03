@@ -32,7 +32,7 @@ class LocalDatabase {
     CREATE TABLE $tableName (
     ${NotificationFields.id} $idType,
     ${NotificationFields.title} $textType,
-    ${NotificationFields.body} $textType,
+    ${NotificationFields.description} $textType,
     ${NotificationFields.date} $textType,
     ${NotificationFields.image} $textType
     )

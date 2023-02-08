@@ -26,10 +26,7 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => DPage());
 
       case RoutName.newsDetailRoute:
-        return MaterialPageRoute(
-            builder: (_) => NewsDetailPage(
-                  notificationModel: settings.arguments as NotificationModel,
-                ));
+        return MaterialPageRoute(builder: (_) => NewsDetailPage());
       // case RoutName.productInfo:
       //   final args = settings.arguments as Map<String, dynamic>;
       //   return MaterialPageRoute(

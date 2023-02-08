@@ -3,8 +3,9 @@ import 'package:fifth_exam/cubit/notification_get_cubit/notification_cubit.dart'
 import 'package:fifth_exam/cubit/user_cubit/user_cubit_cubit.dart';
 import 'package:fifth_exam/data/local_db/local_database.dart';
 import 'package:fifth_exam/data/models/notification_model/notification_model.dart';
+import 'package:fifth_exam/data/service/local_notification/local_notification_service.dart';
 import 'package:fifth_exam/screens/router.dart';
-import 'package:fifth_exam/service/locator_service.dart';
+import 'package:fifth_exam/data/service/locator/locator_service.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
@@ -54,6 +55,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
+    LocalNotificationService.localNotificationService.init(navigatorKey);
     return MaterialApp(
       initialRoute: RoutName.tabBox,
       onGenerateRoute: AppRoutes.generateRoute,
@@ -62,6 +65,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      navigatorKey: navigatorKey,
     );
   }
 }

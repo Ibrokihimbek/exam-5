@@ -1,4 +1,4 @@
-import 'package:fifth_exam/data/api_service/api_service.dart';
+import 'package:fifth_exam/data/service/api_service/api_service.dart';
 import 'package:fifth_exam/data/repository/notification_repository.dart';
 import 'package:fifth_exam/data/repository/user_repository.dart';
 import 'package:get_it/get_it.dart';

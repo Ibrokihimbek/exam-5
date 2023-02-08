@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:fifth_exam/data/api_service/custom_exeption.dart';
+import 'package:fifth_exam/data/service/api_service/custom_exeption.dart';
 
 class ApiClient {
   ApiClient() {

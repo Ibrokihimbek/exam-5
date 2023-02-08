@@ -11,12 +11,11 @@ class NotificationApiService {
       "to": "/topics/news",
       "notification": {"title": "Xabar keldi", "body": "Biz Imtixondan o'tdik"},
       "data": {
-        "news_title": "Bizda Imtixon",
-        "news_body": "Biz Imtixondan o'tdik",
-        "news_image":
-            "https://buildfire.com/wp-content/uploads/2018/03/what-is-a-push-notification-and-why-it-matters-1200x675.jpg",
-        "route": 'notification'
-      }
+        "title" : "Bizda Imtixon",
+        "description" : "Biz Imtixondan o'tdik",
+        "image" : "https://buildfire.com/wp-content/uploads/2018/03/what-is-a-push-notification-and-why-it-matters-1200x675.jpg",
+        "route":"/news_route"
+    }
     };
 
     Uri uri = Uri.parse("https://fcm.googleapis.com/fcm/send");

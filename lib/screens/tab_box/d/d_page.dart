@@ -1,7 +1,7 @@
 import 'package:fifth_exam/cubit/notification_get_cubit/notification_cubit.dart';
 import 'package:fifth_exam/cubit/notification_get_cubit/notification_state.dart';
 import 'package:fifth_exam/data/local_db/local_database.dart';
-import 'package:fifth_exam/data/notification_send_cervice/notificatio_send.dart';
+import 'package:fifth_exam/data/service/notification_send_cervice/notificatio_send.dart';
 import 'package:fifth_exam/screens/tab_box/d/widgets/notification_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
